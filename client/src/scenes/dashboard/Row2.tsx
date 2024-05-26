@@ -20,14 +20,14 @@ import {
   ZAxis
 } from 'recharts'
 
-type Props = {}
+
 
 const pieData = [
   { name: "Group A", value: 600 },
   { name: "Group B", value: 400 },
 ]
 
-const Row2 = (props: Props) => {
+const Row2 = () => {
   const { palette } = useTheme();
   const pieColors = [palette.primary[800], palette.primary[300]];
   const { data: operationalData } = useGetKpisQuery();
@@ -178,7 +178,7 @@ const Row2 = (props: Props) => {
             <Scatter
               name="Product Expense Ratio"
               data={productExpenseData}
-              fill= {palette.tertiary[500]}
+              fill= "#8884d8"
             />
           </ScatterChart>
         </ResponsiveContainer>

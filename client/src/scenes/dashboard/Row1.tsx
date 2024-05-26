@@ -7,7 +7,6 @@ import {
   ResponsiveContainer,
   BarChart,
   Bar,
-  Rectangle,
   Legend,
   Line,
   AreaChart,

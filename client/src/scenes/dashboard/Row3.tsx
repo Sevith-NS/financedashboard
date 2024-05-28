@@ -4,12 +4,12 @@ import FlexBetween from '@/components/FlexBox'
 import { useGetKpisQuery, useGetProductsQuery, useGetTransactionsQuery } from '@/state/api'
 import { Box, Typography, useTheme } from '@mui/material'
 import { DataGrid, GridCellParams } from '@mui/x-data-grid'
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 import { PieChart, Pie, Cell } from 'recharts'
 
-type Props = {}
 
-const Row3 = (props: Props) => {
+
+const Row3 = () => {
   const { data: kpiData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
   const { data: transactionData } = useGetTransactionsQuery();
@@ -83,7 +83,7 @@ const Row3 = (props: Props) => {
       headerName: "Count",
       flex: 0.1,
       // Used to display/ render the count values of the porduct purchased
-      renderCell: (params: GridCellParams) => params.value.length,
+      renderCell: (params: GridCellParams) => (params.value as string[]).length,
     },
   ]
   return (
@@ -190,7 +190,7 @@ const Row3 = (props: Props) => {
                   paddingAngle={2}
                   dataKey="value"
                 >
-                  {data.map((entry, index) => (
+                  {data.map((_entry, index) => (
                     <Cell key={`cell-${index}`} fill={pieColors[index]} />
                   ))}
                 </Pie>

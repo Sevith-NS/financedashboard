@@ -223,12 +223,13 @@ const Row3 = () => {
           </Box>
         </Box>
         <Typography margin="1rem" variant="h6">
-          Once, a moment slipped away from time
-          There, I found a story, but not the moment
-          With a bit of laughter, and a bit of tears
-          This moment, too, is going to pass
-          Live every moment here to the fullest
-          This moment might not be here tomorrow
+          This quarter, the company generated $7.4 million in revenue, 
+          representing a 15% increase from the previous period. 
+          Sales volume reached 42,000 units, up by 8%. Key metrics include a 
+          gross margin of 48%, an operating margin of 20%, 
+          and a net profit margin of 14%.  
+          
+          
           
 
         </Typography>
